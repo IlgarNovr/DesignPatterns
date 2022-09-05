@@ -1,0 +1,38 @@
+﻿<Page x:Class="Gallery.Picture"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Gallery"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Picture">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--Back Button-->
+        <Button x:Name="Back" HorizontalAlignment="Left" Width="60" Background="White" BorderThickness="0" Margin="6,2,0,2" Click="Back_Click">
+            <Image Source="/Images/3n.png" RenderTransformOrigin="1.569,0.671" Width="60"/>
+        </Button>
+        <!--Image-->
+        <Image Grid.Row="1" Source="{Binding ImgSource}" HorizontalAlignment="Center"/>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="Backward"  Margin="10,30,0,30" Background="White" BorderThickness="0" Click="Backward_Click">
+                <Image Source="/Images/soll.png"/>
+            </Button>
+            <Button Name="Pause" Margin="10,30,0,30" Background="White" BorderThickness="0" Click="Pause_Click">
+                <Image Source="/Images/dayan.png"/>
+            </Button>
+            <Button Name="Play" Margin="10,30,0,30" Background="White" BorderThickness="0" Click="Play_Click">
+                <Image Source="/Images/davam.png"/>
+            </Button>
+            <Button Name="Forward" Margin="10,30,0,30" Background="White" BorderThickness="0" Click="Forward_Click">
+                <Image Source="/Images/sag.png"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>
